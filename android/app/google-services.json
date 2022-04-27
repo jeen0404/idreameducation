@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "636015607975",
+    "project_id": "idreamedu",
+    "storage_bucket": "idreamedu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636015607975:android:a3a5e7dd4c0106ee285b82",
+        "android_client_info": {
+          "package_name": "com.example.idreamedu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636015607975-gdms8sa4vo1dau5v5tdv005cm30v4tr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG1sgrjzJmJEKYC8YNAfXY3ucmaM_amfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636015607975-gdms8sa4vo1dau5v5tdv005cm30v4tr3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "636015607975-q2n8e5mjfpmu30ebk7ngbjh8s1tpjtbe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.exaple.idreamedu"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
