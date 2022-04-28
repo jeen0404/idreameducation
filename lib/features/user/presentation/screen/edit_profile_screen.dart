@@ -63,7 +63,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             ListTile(title: const Text("Board"),leading: IconButton(icon: const Icon(Icons.place_outlined),onPressed: (){},),
              trailing:DropdownButton<String>(
                value: widget.editProfileCubit.board,
-            items: <String>['cbsc', 'msbshse', 'uk'].map((String value) {
+            items: <String>['cbse', 'msbshse', 'uk'].map((String value) {
               return DropdownMenuItem<String>(
                 value: value,
                 child: Text(value),

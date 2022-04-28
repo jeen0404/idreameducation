@@ -4,6 +4,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:idream/core/database/hive/cache_single_key.dart';
+import 'package:idream/features/home/domain/subject_model.dart';
+import 'package:idream/features/practice/data/practice_model.dart';
 import 'package:idream/features/user/domain/user_model.dart';
 import 'package:idream/features/user/presentation/screen/edit_profile_screen.dart';
 import 'package:idream/firebase_options.dart';
@@ -26,6 +28,8 @@ class AppStartCubit extends Cubit<AppStartCubitState>{
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
     await Hive.initFlutter();
     Hive.registerAdapter(UserModelAdapter());
+    Hive.registerAdapter(SubjectModelAdapter());
+    Hive.registerAdapter(PracticeModelAdapter());
     await Hive.openBox('user_hive');
     await Hive.openBox('app_cache');
    // await Future.delayed(Duration(seconds: 2));

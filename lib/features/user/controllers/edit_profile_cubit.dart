@@ -18,7 +18,7 @@ class EditProfileCubit extends Cubit<EditProfileCubitState> with ScaffoldKeyMixi
 
   TextEditingController fullName=TextEditingController(text: '');
   String langunage='english';
-  String board='cbsc';
+  String board='cbse';
   String studentClass='10';
   
   EditProfileCubit():super(ShowEditProfileCubitState()){

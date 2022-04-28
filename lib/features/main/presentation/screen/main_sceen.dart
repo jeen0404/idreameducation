@@ -6,6 +6,7 @@ import 'package:idream/features/Main/presentation/widget/main_widget.dart';
 import 'package:idream/features/home/presentation/home_screen.dart';
 
 import 'package:idream/features/user/domain/user_model.dart';
+import 'package:idream/features/user/presentation/screen/profile_screen.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreenBloc homeBloc = MainScreenBloc();
@@ -24,17 +25,13 @@ class MainScreen extends StatelessWidget {
             onPressed: () {},
           ),
           actions: [
-            IconButton(
-              icon: const Icon(Icons.notifications_outlined),
-              onPressed: () {},
-            ),
-            mainAppBarPopUpMenu
+            IconButton(onPressed: ()=>Navigator.pushNamed(context, ProfileScreen.route), icon: const Icon(Icons.person_outline))
           ],
 
           title: Row(children: [
             Chip(label: Row(
               children: [
-                Text("Class ${userModel.studentClass}",style: const TextStyle(color: Colors.blueAccent,fontWeight: FontWeight.bold),),
+                SizedBox(width: 50,child: Text("Class ${userModel.studentClass}",style: const TextStyle(color: Colors.blueAccent,fontWeight: FontWeight.bold),overflow: TextOverflow.fade,)),
                 const Icon(Icons.arrow_drop_down_rounded,color: Colors.blueAccent,)
               ],
             ),backgroundColor: Colors.blueAccent.withOpacity(0.2),),
