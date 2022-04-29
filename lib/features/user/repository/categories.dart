@@ -17,6 +17,7 @@ class LoadDataForEditProfile{
     print(uId.toString());
     DatabaseReference databaseReference=database.ref('users/students/'+uId.toString());
     await databaseReference.set(UserModel.toMap(userModel));
+    await UserHive().put(userModel);
     Navigator.of(editProfileCubit.scaffoldkey.currentContext!).pushNamed('/');
     
   }

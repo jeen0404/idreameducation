@@ -26,7 +26,7 @@ class EditProfileCubit extends Cubit<EditProfileCubitState> with ScaffoldKeyMixi
     
   }
 
-void get saveData{
+void get saveData async{
     if(fullName.text.length<4){
     showSnackBar("Name shoudld be greter than 4 alphbabet.",Icon(Icons.info));
     emit(ShowEditProfileCubitState());

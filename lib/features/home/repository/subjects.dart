@@ -13,10 +13,16 @@ class SubjectsRepository{
 
   Future<List<SubjectModel>> getList() async{
     if(AppCacheHive().get('subject_${userModel.studentClass}') != null){
+      try{
       List<dynamic> listOfMap=AppCacheHive().get('subject_${userModel.studentClass}');
       List<SubjectModel> listOfSubjects=[];
       listOfMap.forEach((element) {listOfSubjects.add(element);});
       return listOfSubjects;
+    }
+    catch(e){
+      AppCacheHive().delete('subject_${userModel.studentClass}');
+      return getList();
+    }
     }
     else{
     DatabaseReference databaseReference=firebaseDatabase.ref('subjects/${userModel.boardId}/${userModel.language}/${userModel.studentClass}');
